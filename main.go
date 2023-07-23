@@ -116,7 +116,7 @@ func main() {
 
 func chopLine(line string, length int) []string {
 	line = strings.TrimSpace(line)
-	splitter := regexp.MustCompile(` +`)
+	splitter := regexp.MustCompile(`\s+`)
 	words := splitter.Split(line, -1)
 	lines := make([]string, 0)
 
